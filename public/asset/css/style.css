@@ -1,0 +1,75 @@
+.box {
+    top: 10px; /* Mengatur jarak dari atas */
+    transform: rotate(50deg);
+    right: 10px; /* Mengatur jarak dari kanan */
+  }
+
+.wave {
+    position: absolute;
+    opacity: 0.4;
+    position: absolute;
+    right: 18%;
+    background: #0af;
+    width: 180px; /* Sesuaikan lebar dengan tampilan mobile */
+    height: 180px; /* Sesuaikan tinggi dengan tampilan mobile */
+    transform-origin: 100% 0; /* Mengubah titik transform origin ke pojok kanan atas */
+    border-radius: 50%; /* Menggunakan nilai 50% agar menjadi lingkaran */
+    animation: drift 7000ms infinite linear;
+  }
+  
+@media screen and (max-width: 768px) {
+.wave {
+      margin-right: 50px;
+      margin-top: 160px;
+      right: 50%; /* Sesuaikan nilai right untuk tampilan mobile */
+      width: 100px; /* Sesuaikan lebar dengan tampilan mobile */
+      height: 100px; /* Sesuaikan tinggi dengan tampilan mobile */
+    }
+  }
+
+  .wave.-four {
+    animation: drift 5500ms infinite linear;
+    position: fixed;
+    background-color: #5988ee;
+    -webkit-animation: drift 5500ms infinite linear;
+}
+  
+.wave.-three {
+    animation: drift 7500ms infinite linear;
+    position: fixed;
+    background-color: #77daff;
+  }
+  
+.wave.-two {
+    animation: drift 3000ms infinite linear;
+    opacity: 0.1;
+    background: black;
+    position: fixed;
+  }
+  
+.box:after {
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transform: translate3d(0, 0, 0);
+  }
+
+@keyframes drift {
+    from {
+      transform: rotate(0deg);
+    }
+    from {
+      transform: rotate(360deg);
+    }
+}
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+a i:hover {
+  color: black;
+  text-shadow: 1rem;
+}
